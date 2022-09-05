@@ -2,6 +2,8 @@ Laravel-claims
 
 Plataforma aún en desarrollo para gestión de siniestros. Si bien el proyecto final va a abarcar todas las necesidades del interesado, hasta donde está desarollada la apliación, ya esta siendo utilizada por sus empleados, de quienes tengo feedback y voy trabajando en pos de mejorar la experiencia del usuario y de poder terminar de desarrollar las facetas/instancias restantes.
 
+El diseño es del panel de administración UI STISLA, editado con algo de CSS y Bootstrap.
+
 Principalmente realizada con Laravel, apoyandome en algunas librerías de este mismo framework, me he servido también de recursos commo DataTable para la implementación de CRUD´s.
 
 Con la librería Spatie Laravel Permission, he implementado un sistema de roles y permisos, para que dependiendo el usuario, pueda visualizar y/o acceder a las diferentes funcionalidades de la plataforma. El administrador tiene la posibilidad de crear los roles, asignarles los permisos que necesite, para así poder asignar el rol adecuada para cada usuario.
