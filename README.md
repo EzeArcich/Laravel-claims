@@ -8,11 +8,11 @@ Plataforma aún en desarrollo para gestión de siniestros. Si bien el proyecto f
 
 El diseño es del panel de administración UI STISLA, editado con algo de CSS y Bootstrap.
 
-Principalmente realizada con Laravel, apoyandome en algunas librerías de este mismo framework, me he servido también de recursos commo DataTable para la implementación de CRUD´s.
+Principalmente realizada con Laravel, apoyandome en algunas librerías de este mismo framework, me he servido también de recursos como DataTable para la implementación de CRUD´s.
 
 Con la librería Spatie Laravel Permission, he implementado un sistema de roles y permisos, para que dependiendo el usuario, pueda visualizar y/o acceder a las diferentes funcionalidades de la plataforma. El administrador tiene la posibilidad de crear los roles, asignarles los permisos que necesite, para así poder asignar el rol adecuada para cada usuario.
 
-Dependiendo de los requerimientos del cliente, hay API/CRUD´s que funcionan de manera estándar a través de métodos GEt/POST/PUT, pero en uno que otro caso se debió implemntar AJAX.
+Dependiendo de los requerimientos del cliente, hay API/CRUD´s que funcionan de manera estándar a través de métodos GEt/POST/PUT, pero en uno que otro caso se debió implementar AJAX.
 
 En dos secciones/vistas se puede ver implementado el envío de correos automatizados, donde se envía a ciertos usuarios una plantilla de HTML con valores dinámicos señalados por el usuario. Esto se llevó a cabo con PHPmailer, a través de Gmail. Por razones obvias la función no está operativa ya que se omitieron en este repositorio los datos de correo/contraseña del cliente.
 
