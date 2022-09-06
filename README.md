@@ -1,4 +1,8 @@
+
+![Dag](https://user-images.githubusercontent.com/97700576/188656820-e6c02247-9b09-4039-8854-22e31ba79ec5.png)
+
 Laravel-claims
+
 
 Plataforma aún en desarrollo para gestión de siniestros. Si bien el proyecto final va a abarcar todas las necesidades del interesado, hasta donde está desarollada la apliación, ya esta siendo utilizada por sus empleados, de quienes tengo feedback y voy trabajando en pos de mejorar la experiencia del usuario y de poder terminar de desarrollar las facetas/instancias restantes.
 
