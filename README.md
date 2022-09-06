@@ -16,7 +16,7 @@ Dependiendo de los requerimientos del cliente, hay API/CRUD´s que funcionan de 
 
 En dos secciones/vistas se puede ver implementado el envío de correos automatizados, donde se envía a ciertos usuarios una plantilla de HTML con valores dinámicos señalados por el usuario. Esto se llevó a cabo con PHPmailer, a través de Gmail. Por razones obvias la función no está operativa ya que se omitieron en este repositorio los datos de correo/contraseña del cliente.
 
-Se pueden cargar imágenes y archivos con envios múltiples, las cuales se almacenan directamente en el hosting compartido donde está hecho el despliegue de la plataforma, siendo a través del método ubicadas en una carpeta por número de gestión, estando estos anidades a la gestión correspondiente y no al azar.
+Se pueden cargar imágenes y archivos con envios múltiples, las cuales se almacenan directamente en el hosting compartido donde está hecho el despliegue de la plataforma, siendo a través del método ubicadas en una carpeta por número de gestión, estando estos anidadas a la gestión/id correspondiente, y no al azar.
 
 A futuro la plataforma debería de contar con un sistema de comentarios, donde se señale que usuario hizo el comentario y en que horario, pudiendo agregar fotos, y recibiendo notificaciones cada vez que esto suceda. La idea es utilizar CKEditor5 para los comentarios y subida de archivos, y las notificaciones con una tabla nueva, donde aparezcan las notificaciones del usuario teniendo dos estados (1-sin leer/2-leído).
 
