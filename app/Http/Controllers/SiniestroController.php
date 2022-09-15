@@ -361,6 +361,7 @@ class SiniestroController extends Controller
         $data = Siniestro::insert($request->all());
 
         return response()->json($data);
+        
     }
 
     public function updateData(Request $request, $id)

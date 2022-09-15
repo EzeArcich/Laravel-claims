@@ -43,6 +43,7 @@ Route::post('contactanos', [CoordinacionesController::class, 'store'])->name('co
 
 //PHPMailer
 Route::post('correo', [CoordinacionesController::class, 'correo'])->name('correo');
+Route::post('correoEdu', [CoordinacionesController::class, 'correoEdu'])->name('correoEdu');
 //
 
 Route::post('siniestros', [SiniestroController::class, 'enviar'])->name('siniestros.enviar');
@@ -86,7 +87,7 @@ Route::get('/teacher/allUserData', [SiniestroController::class, 'allUserData']);
 Route::get('/teacher/edit/{id}', [SiniestroController::class, 'editData']); 
 Route::get('/teacher/taller/{id}', [SiniestroController::class, 'tallerData']);
 Route::PUT('/teacher/update/{id}', [SiniestroController::class, 'updateData']);
-Route::get('/teacher/store', [SiniestroController::class, 'storeData']);
+Route::POST('/teacher/store', [SiniestroController::class, 'storeData']);
 Route::get('/teacher/users/{id}', [SiniestroController::class, 'userData']);
 Route::get('/teacher/productores/{id}', [SiniestroController::class, 'productoresData']);
 

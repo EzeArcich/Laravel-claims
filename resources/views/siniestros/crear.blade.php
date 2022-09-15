@@ -302,7 +302,8 @@
                                 
                                                     <hr> 
                                     
-                                                    <button type="submit" class="btn btn-success btn-lg ml-5 mb-3">Aplicar cambios</button>
+                                                    <button onclick="addData(event)" class="btn btn-success btn-lg ml-5 mb-3">Aplicar cambios</button>
+                                                    <button onclick="CorreoEdu(event)" class="btn btn-success btn-lg ml-5 mb-3">Enviar IP</button>
                                     
 
                                     
@@ -555,10 +556,10 @@ function reladData(){
    }); 
 }
 
-function addData(){
+function addData(event){
 
     
-    
+    event.preventDefault();
     var link = $('#link').val();
     var siniestro =  $('#siniestro').val();
     var patente = $('#patente').val();
@@ -570,7 +571,7 @@ function addData(){
     var observaciones = $('#observaciones').val();
     var email = $('#email').val();
     var nombretaller = $('#nombretaller').val();
-    var telefonos = $('#telefono').val();
+    // var telefonos = $('#telefono').val();
     var direccion = $('#direccion').val();
     var localidad = $('#localidad').val();
     var estado = $('#estado').val();
@@ -579,13 +580,25 @@ function addData(){
     var horario = $('#horario').val();
     var comentariosparaip = $('#comentariosparaip').val();
 
+    $.ajaxSetup({
+   headers:{
+       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+   }
+   })
+
     $.ajax({
         type: "POST",
         dataType: "json",
         data: {link:link, siniestro:siniestro, patente:patente, nrocorto:nrocorto, cliente:cliente, modalidad:modalidad, motivo:motivo, correo:correo, observaciones:observaciones, email:email, 
-        nombretaller:nombretaller, telefono:telefono, direccion:direccion, localidad:localidad, estado:estado, fechaip:fechaip, enviarorden:enviarorden, horario:horario, comentariosparaip:comentariosparaip},
+        nombretaller:nombretaller, direccion:direccion, localidad:localidad, estado:estado, fechaip:fechaip, enviarorden:enviarorden, horario:horario, comentariosparaip:comentariosparaip},
         url: "/teacher/store/",
         success: function(data){
+            Swal.fire({
+          icon: 'success',
+          position: 'top-end',
+          showConfirmButton: false,
+          title: 'Siniestro asignado con éxito',
+      })
             
             
             console.log('Siniestro ingresado con éxito');
@@ -816,7 +829,7 @@ function CorreoEdu(event){
 event.preventDefault();
 // var id = $('#id').val();
 var siniestro =  $('#siniestro').val();
-var email = $('#email').val();
+// var email = $('#email').val();
 var fechaip = $('#fechaip').val();
 var patente = $('#patente').val();
 var nrocorto =  $('#nrocorto').val();
@@ -846,7 +859,7 @@ headers:{
  $.ajax({
      type: "POST",
      
-     data: {siniestro:siniestro, email:email, fechaip:fechaip, patente:patente, nrocorto:nrocorto, comentariosparaip:comentariosparaip, telefono:telefono, localidad:localidad, direccion:direccion,
+     data: {siniestro:siniestro, fechaip:fechaip, patente:patente, nrocorto:nrocorto, comentariosparaip:comentariosparaip, telefono:telefono, localidad:localidad, direccion:direccion,
     modalidad:modalidad, nombretaller:nombretaller, motivo:motivo, horario:horario, enviarorden:enviarorden, cliente:cliente},
      url: "/correoEdu",
      success: function(response){
