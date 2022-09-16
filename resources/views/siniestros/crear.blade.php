@@ -146,26 +146,10 @@
                                     <button type="submit" class="btn btn-info btn-lg ml-5 mb-3" onclick="Correo(event)">Contacto vía mail</button>
                                     </div>
                                     </div>
-                                    
-
-                                    <hr>
+                                     <hr>
                                     <div class="card-header DatCord" style="background:linear-gradient(132deg, rgba(2,0,36,1) 0%, rgba(9,51,121,1) 0%, rgba(0,176,255,1) 100%);">
                                 <h4 style="color:white">Datos de coordinación </h4>
                                 </div>
-                                    
-                                    
-                                    
-
-                                    
-
-                                                <!-- Datatable User --> 
-                                                 
-                                    
-                                              
-
-
-                                                <!-- Fin Datatable User -->
-                                    
                                     <div class="col-xs-12 col-sm-12 col-md-12 mt-3 DatCord">           
                                         <label for="observaciones">Observaciones</label>    
                                         <div class="form-floating">
@@ -225,11 +209,6 @@
                                             <option value="foto">Por foto</option>
                                         </select>
                                     </div>
-
-
-
-                                    
-                                    
 
                                     <div class="col-xs-3 col-sm-3 col-md-3 DatCord">
                                     <label for="estado">Estado</label>
@@ -299,17 +278,11 @@
                                 </div>
                                 </div>
                                 </div>
-                                
                                                     <hr> 
                                     
                                                     <button onclick="addData(event)" class="btn btn-success btn-lg ml-5 mb-3">Aplicar cambios</button>
                                                     <button onclick="CorreoEdu(event)" class="btn btn-success btn-lg ml-5 mb-3">Enviar IP</button>
-                                    
-
-                                    
-                                    
                                     </div>
-                                
                                 </div>
                             </form>
                         </div>   
@@ -340,17 +313,13 @@
 		            <div class="table-responsive">        
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                                           
-                                                
-                                                        
                                                     <table class="table mt-2 productores" id="productores" cellspacing="0" width="100%">
                                                         <thead style="background-color:hsl(213, 99%, 49%)">                                     
                                                             <th style="display: none;color:#fff;font-size:20px">ID</th>
                                                             <th style="color:#fff;font-size:17px">Productor</th>
                                                             <th style="color:#fff;font-size:17px">Telefono</th>
                                                             <th style="color:#fff;font-size:17px">E-mail</th>
-                                                            
-                                                                                                                                
+                                                                                                                           
                                                         </thead>
                                                         <tbody>
                                                             @foreach ($productores as $productor)
@@ -359,8 +328,7 @@
                                                                 <td onclick="selectedRow(),productorData('{{ $productor->id }}')">{{ $productor->nombre }}</td>
                                                                 <td onclick="selectedRow(),productorData('{{ $productor->id }}')">{{ $productor->telefono }}</td>
                                                                 <td onclick="selectedRow(),productorData('{{ $productor->id }}')">{{ $productor->correo }}</td>
-
-                                                                
+   
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
@@ -377,14 +345,12 @@
           </div>
         </div>
       </div>
-
       <div class="modal fade" id="modal_talleres" tabindex="-1" role="dialog" >
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header" style="background-color:hsl(213, 99%, 49%);padding-top:5px;">
             <h4 class="modal-title" style="color:white;">Buscar perito</h4>  
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>     
             </div>      
             <div class="container-fluid">
                 <div class="row">
@@ -392,28 +358,21 @@
                     <div style="width: 100%; padding-left: -10px;">    
 		            <div class="table-responsive">        
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
-                                            <label for="">Talleres homologados</label>
-                                                
-                                                        
+                                            <label for="">Talleres homologados</label>      
                                                     <table class="table mt-2 talleres" id="talleres" cellspacing="0" width="100%">
                                                         <thead style="background-color:hsl(213, 99%, 49%)">                                     
                                                             <th style="display: none;font-size:20px">ID</th>
                                                             <th style="color:#fff;font-size:17px">Taller</th>
                                                             <th style="color:#fff;font-size:17px">Localidad</th>
                                                             <th style="color:#fff;font-size:17px">Domicilio</th>
-                                                            
-                                                                                                                                
-                                                        </thead>
+                                                     </thead>
                                                         <tbody>
                                                             @foreach ($talleres as $taller)
                                                             <tr>
                                                                 <td style="display: none;">{{ $taller->id }}</td>
                                                                 <td onclick="selectedRow3(),tallerData('{{ $taller->id }}')">{{ $taller->taller }}</td>
                                                                 <td onclick="selectedRow3(),tallerData('{{ $taller->id }}')">{{ $taller->localidad }}</td>
-                                                                <td onclick="selectedRow3(),tallerData('{{ $taller->id }}')">{{ $taller->direccion }}</td>
-
-                                                                
+                                                                <td onclick="selectedRow3(),tallerData('{{ $taller->id }}')">{{ $taller->direccion }}</td>   
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
@@ -430,12 +389,7 @@
           </div>
         </div>
       </div>
-    
-
 @endsection
-
-
-
 @section('javas')
 
    <script>
@@ -447,16 +401,12 @@
         lengthChange: false,
         responsive: true,
         processing: true,
-        
-    
-        
+      
     });
     })
-    
+  
 
-</script>   
 
-<script>
     
     $(document).ready(function() {
     $('.talleres').DataTable({
@@ -465,16 +415,8 @@
         lengthChange: false,
         responsive: true,
         processing: true,
-
-        
     });
 })
-
-</script>  
-
-<script>
-
-
 
 
 
@@ -497,24 +439,6 @@
             }
             selectedRow();
 
-            function selectedRow2(){
-                
-                var index,
-                    table = document.getElementById("inspectores");
-            
-                for(var i = 1; i < table.rows.length; i++)
-                {
-                    table.rows[i].onclick = function()
-                    {
-                         
-                        {
-                            $(this).addClass('selected').siblings().removeClass('selected')
-                        }
-                    };
-                }
-                
-            }
-            selectedRow2();
 
             function selectedRow3(){
                 
@@ -534,10 +458,6 @@
                 
             }
             selectedRow3();
-
-
-
-
 function clearData(){
  $('#siniestro').val('');
  $('#fechaip').val('');
@@ -556,6 +476,14 @@ function reladData(){
    }); 
 }
 
+
+function redirect(){
+    setTimeout(function() {
+  window.location.href = "https://www.youtube.com/";
+}, 2000);
+}
+
+
 function addData(event){
 
     
@@ -564,14 +492,14 @@ function addData(event){
     var siniestro =  $('#siniestro').val();
     var patente = $('#patente').val();
     var nrocorto = $('#nrocorto').val();
+    var compania = $('#compania').val();
     var cliente = $('#cliente').val();
     var modalidad = $('#modalidad').val();
     var motivo = $('#motivo').val();
     var correo = $('#correo').val();
     var observaciones = $('#observaciones').val();
     var email = $('#email').val();
-    var nombretaller = $('#nombretaller').val();
-    // var telefonos = $('#telefono').val();
+    var nombretaller = $('#nombretaller').val();  
     var direccion = $('#direccion').val();
     var localidad = $('#localidad').val();
     var estado = $('#estado').val();
@@ -590,16 +518,16 @@ function addData(event){
         type: "POST",
         dataType: "json",
         data: {link:link, siniestro:siniestro, patente:patente, nrocorto:nrocorto, cliente:cliente, modalidad:modalidad, motivo:motivo, correo:correo, observaciones:observaciones, email:email, 
-        nombretaller:nombretaller, direccion:direccion, localidad:localidad, estado:estado, fechaip:fechaip, enviarorden:enviarorden, horario:horario, comentariosparaip:comentariosparaip},
+        nombretaller:nombretaller, direccion:direccion, compania:compania, localidad:localidad, estado:estado, fechaip:fechaip, enviarorden:enviarorden, horario:horario, comentariosparaip:comentariosparaip},
         url: "/teacher/store/",
         success: function(data){
+            redirect();
             Swal.fire({
           icon: 'success',
           position: 'top-end',
           showConfirmButton: false,
-          title: 'Siniestro asignado con éxito',
-      })
-            
+          title: 'Siniestro ingresado con éxito',
+      }), 
             
             console.log('Siniestro ingresado con éxito');
         }
@@ -608,15 +536,8 @@ function addData(event){
 
 }
 
-
-
-
     function editData(id){
-    
 
-
-
- 
     $.ajax({
         type:"get",
         dataType:"json",
@@ -635,10 +556,6 @@ function addData(event){
 
 function userData(id){
     
-
-
-
- 
     $.ajax({
         type:"get",
         dataType:"json",
@@ -649,9 +566,7 @@ function userData(id){
             // $('#id_inspector').val(data.id);
             $('.name').val(data.name);
             $('#email').val(data.email);
-            
-           
-
+          
             console.log(data);
         }
     })
@@ -659,10 +574,6 @@ function userData(id){
 
 function productorData(id){
     
-
-
-
- 
     $.ajax({
         type:"get",
         dataType:"json",
@@ -683,10 +594,6 @@ function productorData(id){
 
 function tallerData(id){
     
-
-
-
- 
     $.ajax({
         type:"get",
         dataType:"json",
@@ -709,73 +616,6 @@ function tallerData(id){
 }
 
 
- // --------------------------------------------- Update de registros a la table de BD -----------------------------------------------------
-
-
-
-
-    function updateData(event){
-
-   event.preventDefault();
-    var id = $('#id').val();
-    var link = $('#link').val();
-    var siniestro =  $('#siniestro').val();
-    var patente = $('#patente').val();
-    var nrocorto = $('#nrocorto').val();
-    var cliente = $('#cliente').val();
-    var modalidad = $('#modalidad').val();
-    
-    var motivo = $('#motivo').val();
-    var correo = $('#correo').val();
-    var observaciones = $('#observaciones').val();
-    var email = $('#email').val();
-    var nombretaller = $('#nombretaller').val();
-    var telefonos = $('#telefono').val();
-    var direccion = $('#direccion').val();
-    var localidad = $('#localidad').val();
-    var estado = $('#estado').val();
-    var fechaip = $('#fechaip').val();
-    var enviarorden = $('#enviarorden').val();
-    var horario = $('#horario').val();
-    var comentariosparaip = $('#comentariosparaip').val();
-    
-    
-    
-    
-     
-    
-    $.ajaxSetup({
-   headers:{
-       'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-   }
-   })
- 
-
-    $.ajax({
-        type: "PUT",
-        
-        data: {modalidad:modalidad, motivo:motivo, fechaip:fechaip, patente:patente, siniestro:siniestro, localidad:localidad, direccion:direccion, email:email, estado:estado,
-        observaciones:observaciones, nombretaller:nombretaller, telefono:telefonos, localidad:localidad, enviarorden:enviarorden, horario:horario, comentariosparaip:comentariosparaip, link:link,
-        nrocorto:nrocorto, cliente:cliente},
-        url: "/teacher/update/"+id,
-        success: function(response){
-         Swal.fire({
-             icon: 'success',
-             position: 'top-end',
-             showConfirmButton: false,
-             title: 'Siniestro actualizado con éxito',
-         })
-         timer: 1500;
-        
-           
-         
-        console.log('Siniestro asignado con éxito');
-        }
-     
-    })
-
-
-   }
 // <-------------------------------------- Para enviar correo ---------------------------------------------------------------------------------->
 
 function Correo(event){
@@ -838,7 +678,6 @@ var telefono = $('#telefono').val();
 var localidad = $('#localidad').val();
 var direccion =  $('#direccion').val();
 var modalidad = $('#modalidad').val();
-
 var nombretaller = $('#nombretaller').val();
 var motivo = $('#motivo').val();
 var horario = $('#horario').val();
@@ -846,9 +685,6 @@ var cliente = $('#cliente').val();
 var enviarorden = $('#enviarorden').val();
 
 
-
-
- 
  $.ajaxSetup({
 headers:{
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -875,15 +711,9 @@ headers:{
            
          
         console.log('Correo enviado con exito');
-        }
-  
+        }  
  })
-
-
 }
-
- 
-
 
 </script>
 @endsection
