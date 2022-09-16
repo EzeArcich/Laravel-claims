@@ -201,8 +201,8 @@ class CoordinacionesController extends Controller
             $mail->SMTPDebug = 0;
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;  
-            $mail->Username = 'coordinaciones.dag@gmail.com';
-            $mail->Password = 'ffeojwyvlthuwurx';
+            $mail->Username = '';
+            $mail->Password = '';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
     
