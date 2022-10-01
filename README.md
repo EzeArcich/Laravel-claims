@@ -1,5 +1,6 @@
+![image](https://user-images.githubusercontent.com/97700576/193408797-3445ffa8-468e-410f-aa83-52b5fbe6b44c.png)
 
-![Dag](https://user-images.githubusercontent.com/97700576/188656820-e6c02247-9b09-4039-8854-22e31ba79ec5.png)
+
 
 Laravel-claims
 
